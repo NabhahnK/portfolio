@@ -1,3 +1,48 @@
+:root {
+    --main-color: #afeeee;
+    --accent-color: #eeafaf;
+    --second-color: #eeceaf;
+}
+
 html {
-    background-color: paleturquoise;
+    background-color: var(--main-color);
+}
+
+nav {
+    background-color: var(--accent-color);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+#welcome-section,
+#projects,
+#seperater {
+    background-color: var(--second-color);
+}
+
+#welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100$;
+    height: 100vh;
+}
+
+#projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+img {
+    width: 500px
+}
+
+@media (max-width: 460px) {
+    img {
+        width: 250;
+    }
 }
